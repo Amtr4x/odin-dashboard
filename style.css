@@ -1,8 +1,8 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 250px repeat(3, 1fr) 300px;
+  grid-template-rows: 120px 1fr;
   grid-template-areas:
     "nav header header header header"
     "nav main main main aside"
@@ -179,8 +179,61 @@ nav {
 }
 
 main {
-  border: red 2px solid;
   grid-area: main;
+  background-color: #d4ecfe;
+  padding: 20px;
+
+  h1 {
+    font-size: 24px;
+    margin: 10px;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px 40px;
+    list-style-type: none;
+
+    li {
+      padding: 15px;
+      /* width: 280px; */
+      height: 160px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: #adadad 4px 4px 10px;
+      border-left: #ffd061 6px solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .reactions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+
+        button {
+          background-color: transparent;
+          border: none;
+          width: 25px;
+          height: 25px;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .favorite {
+          background-image: url(./assets/star.svg);
+        }
+
+        .view {
+          background-image: url(./assets/visibility.svg);
+        }
+
+        .share {
+          background-image: url(./assets/share.svg);
+        }
+      }
+    }
+  }
 }
 
 aside {
