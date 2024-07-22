@@ -1,0 +1,31 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 20vh);
+  grid-template-areas:
+  "nav header header header header"
+  "nav main main main aside"
+  "nav main main main aside"
+  "nav main main main aside"
+  "nav main main main aside";
+}
+
+header {
+  border: yellow 2px solid;
+  grid-area: header;
+}
+
+nav {
+  border: blue 2px solid;
+  grid-area: nav;
+}
+
+main {
+  border: red 2px solid;
+  grid-area: main;
+}
+
+aside {
+  border: green 2px solid;
+  grid-area: aside;
+}
