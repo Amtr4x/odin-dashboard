@@ -1,18 +1,71 @@
 body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 20vw);
   grid-template-rows: repeat(5, 20vh);
   grid-template-areas:
-  "nav header header header header"
-  "nav main main main aside"
-  "nav main main main aside"
-  "nav main main main aside"
-  "nav main main main aside";
+    "nav header header header header"
+    "nav main main main aside"
+    "nav main main main aside"
+    "nav main main main aside"
+    "nav main main main aside";
 }
 
 header {
   border: yellow 2px solid;
   grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  .search__bar {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    align-content: center;
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input {
+      flex-grow: 1;
+      border-radius: 25px;
+      height: 30px;
+      border: none;
+      background-color: #ededed;
+    }
+
+    button {
+      width: 30px;
+      height: 30px;
+      border: none;
+      background-color: transparent;
+      padding: 5px;
+      background-image: url(./assets/search.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .notification__bar {
+    border: orange 2px solid;
+    grid-column: 4 / end;
+    grid-row: 1 / 2;
+  }
+
+  .profile {
+    border: green 2px solid;
+    grid-column: 1 / 4;
+    grid-row: 2 / end;
+    display: flex;
+    gap: 15px;
+  }
+
+  .buttons__bar {
+    border: palevioletred 2px solid;
+    grid-column: 4 / end;
+    grid-row: 2 / end;
+  }
 }
 
 nav {
