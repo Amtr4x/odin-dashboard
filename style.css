@@ -12,6 +12,7 @@ body {
 }
 
 header {
+  padding-top: 10px;
   border: yellow 2px solid;
   grid-area: header;
   display: grid;
@@ -83,11 +84,37 @@ header {
   }
 
   .profile {
-    border: green 2px solid;
     grid-column: 1 / 4;
     grid-row: 2 / end;
     display: flex;
     gap: 15px;
+    align-items: center;
+    padding-inline: 20px;
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      background-color: #ffd061;
+      border-radius: 50%;
+      background-image: url(./assets/person.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .profile__greetings {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .profile__name {
+      font-size: 20px;
+      font-weight: bold;
+
+      .profile__username {
+        font-size: 18px;
+        color: #2a2a2a;
+      }
+    }
   }
 
   .buttons__bar {
