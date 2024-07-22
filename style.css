@@ -36,8 +36,8 @@ header {
     }
 
     button {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
       border: none;
       background-color: transparent;
       padding: 5px;
@@ -48,9 +48,38 @@ header {
   }
 
   .notification__bar {
-    border: orange 2px solid;
     grid-column: 4 / end;
     grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+
+    .notification__btn {
+      border: none;
+      background-color: transparent;
+      width: 25px;
+      height: 25px;
+      background-image: url(./assets/notifications.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .notification__avatar {
+      width: 30px;
+      height: 30px;
+      background-color: #ffd061;
+      border: none;
+      border-radius: 50%;
+      background-image: url(./assets/person.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 18px;
+    }
   }
 
   .profile {
