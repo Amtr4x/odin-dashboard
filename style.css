@@ -1,14 +1,19 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: grid;
-  grid-template-columns: repeat(5, 20vw);
-  grid-template-rows: repeat(5, 20vh);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "nav header header header header"
     "nav main main main aside"
     "nav main main main aside"
     "nav main main main aside"
     "nav main main main aside";
+}
+
+p {
+  color: #4d4d4d;
+  text-wrap: pretty;
 }
 
 header {
@@ -179,6 +184,56 @@ main {
 }
 
 aside {
-  border: green 2px solid;
   grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 15px;
+  background-color: #d4ecfe;
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    border-radius: 5px;
+    box-shadow: #adadad 4px 8px 10px;
+    padding: 15px;
+    list-style-type: none;
+    background-color: #ffffff;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  .announcements li {
+    padding-bottom: 5px;
+    border-bottom: #c0c0c0 1px solid;
+  }
+
+  .trend__elem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #ffd061;
+      background-image: url(./assets/person.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .username {
+      font-weight: bold;
+    }
+
+    .title {
+      font-size: 14px;
+    }
+  }
 }
