@@ -118,9 +118,22 @@ header {
   }
 
   .buttons__bar {
-    border: palevioletred 2px solid;
     grid-column: 4 / end;
     grid-row: 2 / end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    button {
+      width: 80px;
+      height: 35px;
+      border-radius: 25px;
+      background-color: #1a9bf8;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+    }
   }
 }
 
