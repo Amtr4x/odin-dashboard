@@ -13,7 +13,6 @@ body {
 
 header {
   padding-top: 10px;
-  border: yellow 2px solid;
   grid-area: header;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -138,8 +137,40 @@ header {
 }
 
 nav {
-  border: blue 2px solid;
   grid-area: nav;
+  background-color: #1a9bf8;
+  padding: 20px;
+
+  ul {
+    width: 250px;
+    list-style-type: none;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .dashboard-ico {
+        width: 50px;
+        height: auto;
+      }
+
+      .dashboard-text {
+        font-size: 24px;
+      }
+    }
+  }
+
+  a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+  }
 }
 
 main {
